@@ -38,6 +38,7 @@ public class GyroTranslator : MonoBehaviour
         else
         {
             if (Input.GetMouseButtonDown(0)) ResetParallax();
+            else if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
 
             xRotation += -Input.gyro.rotationRateUnbiased.x;
             yRotation += -Input.gyro.rotationRateUnbiased.y;
