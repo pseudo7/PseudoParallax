@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba470a47d1b05954bac95a2e2ae652d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  editorDampening: 10
-  deviceDampening: 5
+  editorDampening: 15
+  deviceDampening: 10
 --- !u!114 &534669909
 MonoBehaviour:
   m_ObjectHideFlags: 0

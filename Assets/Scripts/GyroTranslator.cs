@@ -3,8 +3,8 @@
 [RequireComponent(typeof(Camera))]
 public class GyroTranslator : MonoBehaviour
 {
-    [SerializeField] float editorDampening = 10;
-    [SerializeField] float deviceDampening = 5;
+    [SerializeField] float editorDampening = 15;
+    [SerializeField] float deviceDampening = 10;
 
     static float zPos, dampening;
 
