@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PseudoParallax : MonoBehaviour
+public class ParallaxManager : MonoBehaviour
 {
     static Camera mainCam;
 
