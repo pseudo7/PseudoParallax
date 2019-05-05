@@ -11,7 +11,7 @@ public class ParallaxManager : MonoBehaviour
     #region Constants
     const float FOV = 60;
     const float NEAR_CLIP_PLANE = 0.05F;
-    const float FAR_CLIP_PLANE = 20.0F;
+    const float FAR_CLIP_PLANE = 15.0F;
 
     const float PARALLAX_STEP = 0.012F;
     const float HORIZONTAL_OBLIQUE = 0.06F;

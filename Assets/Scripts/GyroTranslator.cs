@@ -14,6 +14,7 @@ public class GyroTranslator : MonoBehaviour
 
     void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         zPos = transform.position.z;
         Input.gyro.enabled = true;
         isEditor = Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor;
@@ -40,9 +41,9 @@ public class GyroTranslator : MonoBehaviour
             if (Input.GetMouseButtonDown(0)) ResetParallax();
             else if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
 
-            xRotation += -Input.gyro.rotationRateUnbiased.x;
-            yRotation += -Input.gyro.rotationRateUnbiased.y;
-            transform.position = new Vector3(yRotation * dampening, xRotation * dampening, zPos);
+            xRotation += Input.gyro.rotationRateUnbiased.x;
+            yRotation += Input.gyro.rotationRateUnbiased.y;
+            transform.position = new Vector3(yRotation * dampening, -xRotation * dampening, zPos);
         }
     }
 
