@@ -6,6 +6,7 @@ public class Trombone : MonoBehaviour
 {
     public Transform target;
     public new Camera camera;
+    public float speed = 5f;
 
     private float initHeightAtDist;
     private bool dzEnabled;
@@ -51,6 +52,6 @@ public class Trombone : MonoBehaviour
         }
 
         // Simple control to allow the camera to be moved in and out using the up/down arrows.
-        transform.Translate(Input.GetAxis("Vertical") * Vector3.forward * Time.deltaTime * 5f);
+        transform.Translate(Input.GetAxis("Vertical") * Vector3.forward * Time.deltaTime * speed);
     }
 }
