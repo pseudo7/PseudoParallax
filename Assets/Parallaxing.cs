@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Parallaxing : MonoBehaviour
 {
-    static Camera mainCam;
+    public Camera renderCam;
 
     static float AspectRatio
     {
@@ -31,7 +31,7 @@ public class Parallaxing : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector2 camPos = mainCam.transform.position;
+        Vector2 camPos = renderCam.transform.position;
 
         //bool isXNegative = camPos.x < 0;
         //bool isYNegative = camPos.y < 0;
@@ -44,15 +44,14 @@ public class Parallaxing : MonoBehaviour
 
         //Debug.LogFormat("Left: {0}, Right: {1}, Top: {2}, Bottom: {3}, iSY: {4}, iSX: {5}", LEFT, RIGHT, TOP, BOTTOM, isYNegative, isXNegative);
 
-        mainCam.projectionMatrix = PerspectiveOffCenter(LEFT, RIGHT, BOTTOM, TOP, NEAR_CLIP_PLANE, FAR_CLIP_PLANE);
+        renderCam.projectionMatrix = PerspectiveOffCenter(LEFT, RIGHT, BOTTOM, TOP, NEAR_CLIP_PLANE, FAR_CLIP_PLANE);
     }
 
     void SetupCamera()
     {
-        mainCam = Camera.main;
-        mainCam.orthographic = false;
-        mainCam.nearClipPlane = NEAR_CLIP_PLANE;
-        mainCam.farClipPlane = FAR_CLIP_PLANE;
+        renderCam.orthographic = false;
+        renderCam.nearClipPlane = NEAR_CLIP_PLANE;
+        renderCam.farClipPlane = FAR_CLIP_PLANE;
         HORIZONTAL_OBLIQUE = VERTICAL_OBLIQUE * AspectRatio;
         PARALLAX_STEP = NEAR_CLIP_PLANE / FAR_CLIP_PLANE;
     }

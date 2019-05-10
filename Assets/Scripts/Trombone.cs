@@ -1,57 +1,49 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Trombone : MonoBehaviour
 {
     public Transform target;
-    public new Camera camera;
-    public float speed = 5f;
+    public Camera mainCam;
+    public float initialDistance = 15;
 
     private float initHeightAtDist;
-    private bool dzEnabled;
-
-    // Calculate the frustum height at a given distance from the camera.
-    float FrustumHeightAtDistance(float distance)
+    void Start()
     {
-        return 2.0f * distance * Mathf.Tan(camera.fieldOfView * 0.5f * Mathf.Deg2Rad);
+        Setup();
+        ApplyFOV();
     }
 
-    // Calculate the FOV needed to get a given frustum height at a given distance.
+    void LateUpdate()
+    {
+#if UNITY_EDITOR
+        if (Input.anyKey)
+            ApplyFOV();
+#else
+        if (Input.touchCount == 1)
+            ApplyFOV();
+#endif
+    }
+
+    float FrustumHeightAtDistance(float distance)
+    {
+        return 2.0f * distance * Mathf.Tan(mainCam.fieldOfView * 0.5f * Mathf.Deg2Rad);
+    }
+
     float FOVForHeightAndDistance(float height, float distance)
     {
         return 2.0f * Mathf.Atan(height * 0.5f / distance) * Mathf.Rad2Deg;
     }
 
-    // Start the dolly zoom effect.
-    void StartDZ()
+    void Setup()
     {
         var distance = Vector3.Distance(transform.position, target.position);
         initHeightAtDist = FrustumHeightAtDistance(distance);
-        dzEnabled = true;
+        mainCam.transform.position += Vector3.forward * initialDistance;
     }
 
-    // Turn dolly zoom off.
-    void StopDZ()
+    void ApplyFOV()
     {
-        dzEnabled = false;
-    }
-
-    void Start()
-    {
-        StartDZ();
-    }
-
-    void Update()
-    {
-        if (dzEnabled)
-        {
-            // Measure the new distance and readjust the FOV accordingly.
-            var currDistance = Vector3.Distance(transform.position, target.position);
-            camera.fieldOfView = FOVForHeightAndDistance(initHeightAtDist, currDistance);
-        }
-
-        // Simple control to allow the camera to be moved in and out using the up/down arrows.
-        transform.Translate(Input.GetAxis("Vertical") * Vector3.forward * Time.deltaTime * speed);
+        float currDistance = Vector3.Distance(transform.position, target.position);
+        mainCam.fieldOfView = FOVForHeightAndDistance(initHeightAtDist, currDistance);
     }
 }
