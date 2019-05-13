@@ -88,7 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000000, guid: fa5a828a8fa8ce247aed5a268292d038,
+  m_LightingDataAsset: {fileID: 112000000, guid: c6613e23490a88c46b50c6a10d333fd1,
     type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -2039,10 +2039,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba470a47d1b05954bac95a2e2ae652d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowerLeftBound: {x: -4.95, y: -2.4, z: -14}
-  upperRightBound: {x: 4.95, y: 2.4, z: -4}
+  lowerLeftBound: {x: -4.95, y: -2.4}
+  upperRightBound: {x: 4.95, y: 2.4}
   editorDampening: 30
-  deviceDampening: 10
+  deviceDampening: 12
   resetSpeed: 3.5
 --- !u!114 &944655584
 MonoBehaviour:
