@@ -2042,7 +2042,7 @@ MonoBehaviour:
   lowerLeftBound: {x: -4.95, y: -2.4}
   upperRightBound: {x: 4.95, y: 2.4}
   editorDampening: 30
-  deviceDampening: 12
+  deviceDampening: 10
   resetSpeed: 3.5
 --- !u!114 &944655584
 MonoBehaviour:
