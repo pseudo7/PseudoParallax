@@ -1,5 +1,8 @@
 # PseudoParallax
-Observe Models in 3D-Parallax using Mobile Device
+## Observe Models in 3D-Parallax (Anaglyph, Mono-Scopic and Trombone) using Mobile Device
+
+### Monoscopic 3D
+<img src="GIFs/Monoscopic_01_min.gif">
 
 Copyright (c) 2019 Nikhil Sood
 
