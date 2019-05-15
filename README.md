@@ -9,15 +9,26 @@
 - Slide the finger `Up/Down` to move the **Camera.** 
 <img src="GIFs/Monoscopic_02_min.gif">
 
-- You can use **2 Fingers** to reset **Gyro.**
+- Use **2 Fingers** to reset **Gyro.**
 - `While turning around make sure, the device remains parallel to the face.`
 <hr>
 
 ### Anaglyph 3D
 <img src="GIFs/Anaglyph_min.gif">
 
+- Place any **3D Model** in the **Scene** to make **Anaglyph.**
+- Rotate around using touch.
+- Easy to use `Anaglyph Setup` Prefab, replaces your **Main Camera.**
+<hr>
+
 ### Trombone Prallax
 <img src="GIFs/Trombone_min.gif">
+
+- Easy to use Modular Script.
+- Slide the finger `Up/Down` to perform **Trombone Parallaxing.** 
+<hr>
+
+PS: Thanks for DevAssets for the models.
 
 
 Copyright (c) 2019 Nikhil Sood
