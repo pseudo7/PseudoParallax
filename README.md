@@ -2,13 +2,21 @@
 ### Observe Models in 3D-Parallax (Anaglyph, Mono-Scopic and Trombone) using Any Android Mobile Device
 
 ## GIFs
-#### Monoscopic 3D
+### Monoscopic 3D
 <img src="GIFs/Monoscopic_01_min.gif">
 
-#### Anaglyph 3D
+- This feature uses **Gyro** for parallaxing effect, make sure the device supports **Gyro.**
+- Slide the finger `Up/Down` to move the **Camera.** 
+<img src="GIFs/Monoscopic_02_min.gif">
+
+- You can use **2 Fingers** to reset **Gyro.**
+- `While turning around make sure, the device remains parallel to the face.`
+<hr>
+
+### Anaglyph 3D
 <img src="GIFs/Anaglyph_min.gif">
 
-#### Trombone Prallax
+### Trombone Prallax
 <img src="GIFs/Trombone_min.gif">
 
 
