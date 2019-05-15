@@ -44,4 +44,12 @@ public class DDOLNavigation : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+
+#if UNITY_EDITOR
+    [UnityEditor.MenuItem("Pseudo/Capture")]
+    public static void Capture()
+    {
+        ScreenCapture.CaptureScreenshot(string.Format("{0}.png", System.DateTime.Now.Ticks));
+    }
+#endif
 }
