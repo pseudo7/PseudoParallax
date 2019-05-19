@@ -1,5 +1,5 @@
 # PseudoParallax
-### Observe Models in 3D-Parallax (Anaglyph, Mono-Scopic and Trombone) using Any Android Mobile Device
+### Observe Models in 3D-Parallax (Anaglyph, Mono-Scopic and Trombone) using any Android Mobile Device
 <img src="Screenshots/01.png">
 
 ## GIFs
