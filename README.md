@@ -29,7 +29,7 @@
 - Slide the finger `Up/Down` to perform **Trombone Parallaxing.** 
 <hr>
 
-PS: Thanks for DevAssets for the models.
+PS: Thanks to DevAssets for the models.
 
 
 Copyright (c) 2019 Nikhil Sood
